@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sv">
+	<head>
+		<meta charset="UTF-8">
+        <!--gör sidan anpassad efter olika skärmstorlekar-->
+		<meta name="viewport" content="width=device-width, initial scale=1.0">
+		
+			<!-- Titel- Texten visas i webbläsarens flik-->
+		<title> Stensäter </title> 
+			<!--länk till css stylesheet-->
+		<link rel="stylesheet" href="style2.css">
+    </head>
+   
+    <body>
+        <script>
+function openForm() {
+  document.getElementById("form").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("form").style.display = "none";
+}
+
+        </script>
+
+<div class="grid" id="modal">
+<header class="mainh">
+    <a href="index.html"><img src="logo.png" alt="logga" class="logo" ></a>
+    
+</header>
+
+<nav class="mainmenu"><ul class="menu">
+    <li><a href="index.html">Hem</a></li> <!--publik?-->
+    <li><a href="about.html">Om föreningen</a></li> <!--Publik?-->
+    <li><a href="news.html" class="active">Nyheter</a></li> <!--låst?-->
+    <li><a href="members.html">Medlemmar</a></li> <!--låst?-->
+    <li><a href="docs.html">Dokument</a></li> <!--låst?-->
+    <li style="float:right"><a href="mypages.html">Mina sidor</a> </li><!--länk till mina sidor`?--> 
+    <!--<div class="dropdown">
+      <button class="dropbtn">Dropdown
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">   SKAPAR DROPDOWN, SKA ANVÄNDAS?
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>-->
+</ul></nav>
+
+          
+
+            <article class="content" style="overflow-x:auto;">
+                <h2>Alla nyheter</h2>
+
+                <table class="news">
+                <tr>
+                    <th>Datum</th>    
+                    <th>skickat av</th>
+                    <th>nyhet</th>
+                </tr>
+                <tr>
+                    <td>2023-01-08</td>
+                    <td>Namn Namn</td>
+                    <td>Isen är tunn! Besöks med försiktighet</td>
+                </tr>
+                <tr>
+                    <td>2023-02-28</td>
+                    <td>Namn Efternamn</td>
+                    <td>Lövröjning i diken kommer ske under vecka 10</td>
+                </tr>
+                <tr>
+                    <td>2023-03-06</td>
+                    <td>Namn Efternamn</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor eu nibh sollicitudin blandit. Phasellus nibh odio, gravida eget volutpat quis, ultricies ac elit.</td>
+                </tr>
+                </table>
+
+           
+                    <button class="newsbtn" onclick="openForm()">+  lägg till ny nyhet</button>
+                </div>
+            </div>
+                
+                
+            
+                <div class="popup" id="form"> 
+                     <div class="blocker" onclick="closeForm()"></div>
+                        <form class="nytt">
+                            <label for="rubrik"><b>Rubrik</b></label><br>
+                             <input type="text" placeholder="skriv din rubrik här..." name="rubrik" required>
+                             <textarea name="beskrivning" id="beskrivning" rows="6" cols="45" placeholder="skriv text här..." required></textarea>
+                    <br>
+                    <label class="lbl">Nyhet visas för:</label>
+                    <br>
+                    <input type="radio" name="val1" value="">
+                    <label for="val1">Alla</label><br>
+                    <input type="radio" name="val2" value="">
+                    <label for="val1">Medlemmar</label><br>
+                    <input type="radio" name="val3" value="">
+                    <label for="val1">Styrelse</label><br>
+
+                    <label class="lbl">Skicka nyhet via mail/sms</label>
+                    <br>
+                    <input type="checkbox" name="inget" id="inget">
+                    <label for="inget">publicera endast på hemsidan</label>
+                    <br>
+                    <input type="checkbox" name="sms" id="sms">
+                    <label for="sms">skicka nyhet via sms</label>
+                    <br>
+                    <input type="checkbox" name="mail" id="mail">
+                    <label for="mail">skicka nyhet via mail</label>
+                        <br>
+                    
+                    <button type="button" class="cancel" onclick="closeForm()">Avbryt</button>
+                    <button type="submit" class="btn">Skicka</button>
+
+                </form>
+                </div>
+
+                <footer class="footer">
+                    footer
+                </footer>
+          </div>
+    </body>
+</html>

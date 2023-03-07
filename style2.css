@@ -1,0 +1,348 @@
+
+/*namnger elementen i sidorna för att kunna placera ut i grid*/
+.mainh {
+    grid-area: header;
+  }
+  .content {
+    grid-area: content;
+  }
+  .mainmenu {
+    grid-area: nav;
+  }
+  .sidebar {
+    grid-area: sidebar;
+  }
+  .sidebar2 {
+    grid-area: sidebar2;
+  }
+  .sidebar3 {
+    grid-area: sidebar3;
+  }
+  
+  .footer {
+    grid-area: footer;
+  }
+
+  /*placerar ut element i gird för små skärmar (mobile-view)*/
+  .grid {
+    display: grid;
+    gap: 2em;
+    grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "sidebar"
+    "sidebar3"
+    "sidebar2"
+    "footer"
+  }
+
+ 
+
+ /*använder en @media tagg för att ange hur element ska placeras i grid för medelstor skärm (läsplatta)*/
+  @media (min-width: 500px) {
+    .grid {
+      grid-template-columns: repeat(2, minmax(240px, 1fr));;/*bestämmer antal kolumner i grid och strl. funktion minmax används för att göra strl på kolumn responsiv*/
+      grid-template-areas:
+        "header  header"
+        "nav     nav"
+        "content sidebar"
+        "content sidebar3"
+        "content sidebar2"
+        "footer  footer";
+    }
+
+    /*bestämmer att menyn för denna skärmstrl ska vara horizontal*/
+    nav ul {
+      display: flex;
+      justify-content:flex-start;
+    }
+
+
+  }
+
+  /*en till @media tagg används för att placera ut element i grid för stora skärmar*/
+  @media (min-width: 700px) {
+    .grid {
+      grid-template-columns: repeat(3, minmax(240px, 1fr)); /*bestämmer antal kolumner i grid och strl. funktion minmax används för att göra strl på kolumn responsiv*/
+      grid-template-areas:
+        "header header  header"
+        "nav    nav     nav"
+        "content content sidebar"
+        "content content sidebar3"
+        "content content sidebar2"
+        "footer footer  footer";
+    }
+
+    nav ul {
+      display: flex;
+    }
+
+   
+    
+  }
+
+  /*allmänna regler för hemsidan, bestämmer fonter som används om inget annat anges samt bestämmer en bakgrundsfärg för hela sidan*/
+  body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #e9e9f5;
+}
+
+/* stylar menyn */
+
+.mainmenu  {
+    background-color: #2b2865;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #2b2865;
+}
+
+.menu li a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    
+}
+
+.menu li a:hover {
+    background-color: #110f35;
+    
+}
+
+.active {
+    background-color: #110f35;
+}
+
+/*bestämmer strl på logga*/
+.logo {
+    height: 3em;
+    width: 13em;
+    padding: 1em;
+}
+
+/*bestämmer hur alla element med nedan klasser ska se ut*/
+.sidebar, .sidebar2, .sidebar3 {
+    background-color: #bc2561;
+    border-radius: .5em;
+}
+
+/*sätter regler för hur länkar ska se ut, både besökta och icke besökta*/
+a:link, a:visited {
+    color:#e0639d;
+    font-style: none;
+    text-decoration: none;
+    
+}
+/*bestämmer hur länker ser ut när pekaren hovrar*/
+a:hover  {
+    color: #5d1436;
+    
+}
+
+/*sätter regler för hur alla knappar ska se ut*/
+button {
+    background-color: #f1dbe8;
+    color: black;
+    border: 2px solid #1e1e62;
+    border-radius: 0,3em;
+    width: 10em;
+    cursor: pointer;
+    transition-duration: 0.6s;
+    align-items: center;
+}
+/*bestämmer hur knappar ser ut vid hover*/
+button:hover {
+    background-color: #1e1e62;
+}
+
+/*bestämmer font och placering för alla h1-3*/
+h1, h2, h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin: 0.5em;
+}
+
+/*bestämmer font och placering för alla h4-6*/
+h4, h5, h6 {
+    text-align: left;
+    margin: 0;
+}
+
+.sidebar #contact {
+    text-align: center;
+    display: flex;
+    -ms-flex-align: center;
+}
+
+.sidebar iframe {
+    height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+}
+
+
+/*tabell med nyheter i fliken "news"*/
+.news{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.news tr th {
+    background-color: #980000;
+    color: #ffffff;
+    text-align: left;
+}
+
+.news th, .news td {
+    padding: 12px 15px;
+}
+.news tbody tr {
+    border-bottom: 1px solid #6b4a4a;
+}
+
+.news tr:hover {
+    
+    background-color: #e0639d;
+    color: #009879;
+}
+
+/*Tillhör fliken "members"*/
+.board {
+    text-align: left;
+    margin-left: 1em;
+}
+
+.board p {
+    font-size: small;
+}
+
+.doc {
+    padding: 1em;
+    margin: 1em;
+}
+
+
+#minauppg {
+    background-color: #bc2561;
+    border-radius: 0.5em;
+    margin-left: 1em;
+    
+}
+
+#minauppg p {
+    padding-left: 1em;
+    margin: 2px;
+}
+
+
+
+
+/* FÖR POP-UP RUTA*/
+
+/* Button used to open the contact form - fixed at the bottom of the page*/
+.newsbtn {
+    position: top;
+      /*background-color: #555;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8; 
+      position: top-right;
+      bottom: 23px;
+      right: 28px;
+      width: 280px;*/
+    }
+    
+    /* The popup form - hidden by default */
+    .popup {
+      display: none;
+      position: relative;
+      bottom: 0;
+      right: 15px;
+      z-index: 12;
+    }
+    
+    /* Add styles to the form container */
+    .popup .nytt {
+        position: absolute;
+        left: 10;
+       max-width: 450px;
+      padding: 15px;
+      background-color: red;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 10px 10px 5px #110f356c;
+      text-align: left;
+      font-size: small;
+      display: inline-block;
+     z-index: 200;
+     overflow: visible;
+     margin-top: -35em;
+     margin-left: 0.5em;
+        
+    }
+    
+    .lbl {
+        font-weight: bold;
+    }
+    
+    /* Full-width input fields */
+    .nytt input[type=text], .nytt input[type=password] {
+      width: 80%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    /* When the inputs get focus, do something */
+    .nytt input[type=text]:focus, .nytt input[type=radio]:focus, .nytt input[type=checkbox]:focus {
+      background-color: whitesmoke;
+      
+    }
+    
+    /* Set a style for the submit/login button 
+    .btn .cancel {
+      background-color: #391b9a;
+      color: rgb(217, 39, 208);
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }*/
+    
+    
+    /* Add some hover effects to buttons */
+    .nytt .btn:hover, .cancel:hover, .newsbtn:hover {
+      opacity: 1;
+    }
+    
+    
+    .blocker {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: ' ';
+        background: #110f357e;
+    }
+    
+    
