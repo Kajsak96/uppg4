@@ -25,17 +25,12 @@
                 <li><a href="news.html">Nyheter</a> </li><!--låst?-->
                 <li><a href="members.html">Medlemmar</a> </li><!--låst?-->
                 <li><a href="docs.html">Dokument</a> </li><!--låst?-->
-                <li class="rightm"><a href="mypages.html">Mina sidor</a> </li><!--länk till mina sidor`?--> 
-                <!--<div class="dropdown">
-                  <button class="dropbtn">Dropdown
-                    <i class="fa fa-caret-down"></i>
-                  </button>
-                  <div class="dropdown-content">   SKAPAR DROPDOWN, SKA ANVÄNDAS?
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                  </div>
-                </div>-->
+                <li><a href="mypages.html">Mina sidor</a> </li><!--länk till mina sidor`?--> 
+             
+                    <ul class="dropdown">
+                    <li><a href="">Logga ut</a></li>
+                  </ul>
+                  
             </ul></nav>
           
         
@@ -68,29 +63,58 @@
                 Kommande aktiviteter
             </h3>
 
-            <ul>
-            <li>13 mars 2023 - gräsklippning i området</li>
-            <li>3 april 2023 - lövröjning i diken</li>
-            </ul>
+            <table class="news">
+                <tr>
+                    <th>Datum</th>    
+                    <th>Skapad av</th>
+                    <th>Aktivitet</th>
+                </tr>
+                <tr>
+                    <td>2023-04-08</td>
+                    <td>Namn Namn</td>
+                    <td>Korvgrillning för alla vid badstranden!</td>
+                </tr>
+                <tr>
+                    <td>2023-04-07</td>
+                    <td>Namn Efternamn</td>
+                    <td>Städ- och röjardag</td>
+                </tr>
+                </table>
+                <button id="nbtn"onclick="location.href='news.html';">Se alla aktiviteter</button>
         </div>
 
           <div class="sidebar3">
             <h2> 
                 Senaste nyheterna:
             </h2>
-            <ul>
-            <li>Isen är tunn!</li>
-            <li>mer text här...</li>
-            <li>mer text här...</li>
-            <li>mer text här...</li>
-            <li>mer text här...</li>
-            </ul>
-            <button id="nbtn"><a href="news.html">Se alla nyheter</a></button>
+            <table class="news">
+                <tr>
+                    <th>Datum</th>    
+                    <th>skickat av</th>
+                    <th>nyhet</th>
+                </tr>
+                <tr>
+                    <td>2023-01-08</td>
+                    <td>Namn Namn</td>
+                    <td>Isen är tunn! Besöks med försiktighet</td>
+                </tr>
+                <tr>
+                    <td>2023-02-28</td>
+                    <td>Namn Efternamn</td>
+                    <td>Lövröjning i diken kommer ske under vecka 10</td>
+                </tr>
+                <tr>
+                    <td>2023-03-06</td>
+                    <td>Namn Efternamn</td>
+                    <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi maximus tortor eu nibh sollicitudin blandit. Phasellus nibh odio, gravida eget volutpat quis, ultricies ac elit.</td>
+                </tr>
+                </table>
+            <button id="nbtn" onclick="location.href='news.html';">Se alla nyheter</button>
           </div>
 
           <aside class="sidebar" id="contact"> 
-            <h5>Har du frågor till oss i föreningen?</h5>
-            <button id="cbtn"> <a href="mailto:kajsakarlsson96@gmail.com"><img src="email.png" alt="mail icon" id="mail">Kontakta oss!</a></button>
+            <h3>Har du frågor till oss i föreningen?</h3>
+            <button id="cbtn" onclick="location.href='mailto:kajsakarlsson96@gmail.com';">Kontakta oss!</button>
            </aside>
 
            <footer class="footer">

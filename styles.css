@@ -1,0 +1,316 @@
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #e9e9f5;
+}
+
+
+
+.menu {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2b2865;
+    
+    
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    transition-duration: 1s;
+}
+
+.menu li a:hover {
+    background-color: #110f35;
+    
+}
+
+.active {
+    background-color: #110f35;
+}
+
+.logo {
+    height: 3em;
+    width: 13em;
+    padding: 1em;
+}
+
+/*.helpmenu a {
+    background-color: #9692ee;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+
+}*/
+
+@media screen {max-width: 378px;
+    .grid {
+        grid-template-columns: 240px;
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+
+    }
+    
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2em;
+    padding: 2em; 
+    background-color: #ededed5a;
+   
+}
+
+.grid div {
+    display: grid;
+    text-align: center;
+    background-color: #fafafad1;
+    border-radius: 1em;
+}
+
+.content {
+    
+    grid-column: span 2;
+    grid-row: span 3;
+    
+    
+}
+
+.contact {
+    grid-column: 3;
+    grid-row: span 1; 
+    padding: 0.1em; 
+    background-color: #e9e9f5;
+
+}
+
+.cal {
+    grid-column: 3;
+    grid-row: span 1;
+}
+
+.cal li {
+    padding: 0.7em;
+}
+
+
+.nyheter {
+    grid-column: 3;
+    grid-row: span 1;
+    align-self: stretch;
+}
+
+.nyheter li {
+    padding: 0.7em;
+}
+
+
+.about {
+    grid-column: 1 / span 2;
+    grid-row: 1 / 4;
+    
+}
+
+
+.news {
+    grid-column: 1 / span 2;
+    
+}
+
+.tnews {
+border-collapse: collapse;
+margin: 25px 0;
+font-size: 0,9em; 
+min-width: max-content;
+}
+   /* margin: 1em;
+    width: max-content;
+    border-collapse: separate;
+   
+    border-radius: 2px; 
+    box-shadow: 2px 2px 1px #110f356c ;
+    text-align: left;
+}
+
+.tnews th {
+    background-color: #2b2865;
+    color: #e9e9f5;
+padding-left: 1em;
+margin: 2em;
+}
+.tnews tr {
+    margin: 2em;
+}
+*/
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p {
+    text-align: left;
+    padding: 0.5em;
+}
+
+ul {
+text-align: left;
+list-style: none;
+}
+
+button {
+    background-color: #f1dbe8;
+    color: black;
+    border: 2px solid #1e1e62;
+    border-radius: 0,3em;
+    width: 10em;
+    cursor: pointer;
+}
+
+#nbtn {
+    margin-top: auto;
+    width: 10em;
+    
+}
+
+#cbtn {
+    /*width: 20em;
+    height: 8em;
+    background-color: #fafafa;
+    border: none;
+    font-size: larger;*/
+}
+
+#mail {
+   align-items: first baseline;
+   
+}
+
+
+a:link, a:visited {
+    color:#e0639d;
+    font-style: none;
+    text-decoration: none;
+    transition-duration: 0.6s;
+}
+
+a:hover  {
+    color: #5d1436;
+    
+}
+
+button:hover {
+    background-color: #1e1e62;
+}
+
+
+
+
+/* FÖR POP-UP RUTA*/
+
+/* Button used to open the contact form - fixed at the bottom of the page*/
+.newsbtn {
+position: top;
+  /*background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8; 
+  position: top-right;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;*/
+}
+
+/* The popup form - hidden by default */
+.popup {
+  display: none;
+  position: relative;
+  bottom: 0;
+  right: 15px;
+  z-index: 12;*/
+}
+
+/* Add styles to the form container */
+.popup .nytt {
+    position: absolute;
+    left: 0;
+    z-index: 5;
+   max-width: 450px;
+  padding: 15px;
+  background-color: red;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #110f356c;
+  text-align: left;
+  font-size: small;
+    
+}
+
+.lbl {
+    font-weight: bold;
+}
+
+/* Full-width input fields */
+.nytt input[type=text], .nytt input[type=password] {
+  width: 80%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.nytt input[type=text]:focus, .nytt input[type=radio]:focus, .nytt input[type=checkbox]:focus {
+  background-color: whitesmoke;
+  
+}
+
+/* Set a style for the submit/login button 
+.btn .cancel {
+  background-color: #391b9a;
+  color: rgb(217, 39, 208);
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}*/
+
+
+/* Add some hover effects to buttons */
+.nytt .btn:hover, .cancel:hover, .newsbtn:hover {
+  opacity: 1;
+}
+
+
+.blocker {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ' ';
+    background: #110f357e;
+}
+
+
+

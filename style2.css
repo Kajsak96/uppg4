@@ -77,15 +77,18 @@
     nav ul {
       display: flex;
     }
+    .popup {
+        text-align: center;
+       
+      }
 
-   
     
   }
 
   /*allmänna regler för hemsidan, bestämmer fonter som används om inget annat anges samt bestämmer en bakgrundsfärg för hela sidan*/
   body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #e9e9f5;
+    background-color: #efede98f;
 }
 
 /* stylar menyn */
@@ -98,7 +101,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #2b2865;
+    background-color: #4F8073;
 }
 
 .menu li a {
@@ -120,6 +123,37 @@
     background-color: #110f35;
 }
 
+
+/*mina sidor*/
+.navright {
+   
+    list-style: none;
+}
+
+
+/*dropdown*/
+
+.dropdown {
+    display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px #00000033;
+  z-index: 1;
+  }
+  
+  .menu li:hover > .dropdown,
+  .menu li .dropdown:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  
+  .menu li .dropdown li {
+    clear: both;
+    width: 100%;
+  }
+
 /*bestämmer strl på logga*/
 .logo {
     height: 3em;
@@ -129,8 +163,9 @@
 
 /*bestämmer hur alla element med nedan klasser ska se ut*/
 .sidebar, .sidebar2, .sidebar3 {
-    background-color: #bc2561;
-    border-radius: .5em;
+    background-color: #cccfee;
+    border-radius: .3em;
+    box-shadow: #110f35  3px 7px 10px;
 }
 
 /*sätter regler för hur länkar ska se ut, både besökta och icke besökta*/
@@ -149,18 +184,30 @@ a:hover  {
 /*sätter regler för hur alla knappar ska se ut*/
 button {
     background-color: #f1dbe8;
-    color: black;
-    border: 2px solid #1e1e62;
-    border-radius: 0,3em;
+    color: rgb(185, 31, 31);
+    border: #fff;
+    border-radius: .5em;
     width: 10em;
+    height: 3em;
     cursor: pointer;
     transition-duration: 0.6s;
-    align-items: center;
+    text-align: center;
+    margin-top: 0.1em;
+
+    
 }
 /*bestämmer hur knappar ser ut vid hover*/
 button:hover {
     background-color: #1e1e62;
 }
+
+ #nbtn, #cbtn {
+    margin-left: 30%;
+    margin-bottom: 1em;
+    max-width: 20em;
+    min-width: fit-content;
+}
+
 
 /*bestämmer font och placering för alla h1-3*/
 h1, h2, h3 {
@@ -175,11 +222,11 @@ h4, h5, h6 {
     margin: 0;
 }
 
-.sidebar #contact {
-    text-align: center;
-    display: flex;
-    -ms-flex-align: center;
+p {
+    margin: 1em;
 }
+
+
 
 .sidebar iframe {
     height: 100%;
@@ -271,10 +318,14 @@ h4, h5, h6 {
     /* The popup form - hidden by default */
     .popup {
       display: none;
-      position: relative;
-      bottom: 0;
+       /*position: relative;
+     bottom: 0;
       right: 15px;
-      z-index: 12;
+      z-index: 12;*/
+        text-align: center;
+        margin:0 auto;
+        
+      
     }
     
     /* Add styles to the form container */
@@ -292,8 +343,7 @@ h4, h5, h6 {
       display: inline-block;
      z-index: 200;
      overflow: visible;
-     margin-top: -35em;
-     margin-left: 0.5em;
+     
         
     }
     
